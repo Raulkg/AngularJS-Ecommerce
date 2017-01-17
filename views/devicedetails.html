@@ -1,0 +1,15 @@
+<section class="iteminfo">
+    <div class="item cf" ng-model="items">
+        <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+        <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+        <h1>Name of the Device: {{items[myItemD].name}}</h1>
+        <div class="info">
+            <h3></h3>
+            <img src="images/SSD-48.png"/>
+
+            <div class="bio">wwpn : {{items[myItemD].wwpn}}</div>
+            <div class="bio">wwnn : {{items[myItemD].wwnn}}</div>
+        </div>
+    </div>
+    <a href="index.html">&laquo; Back to search</a>
+</section>

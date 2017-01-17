@@ -1,0 +1,38 @@
+
+<section class="listpage">
+<div class="search">
+<h1> Device Directory</h1>
+<label>Search</label>
+<input placeholder="Search for devices" ng-model="query.controller_name"></input>
+
+</div>
+	<ul class="itemlist" >
+
+		<li ng-animate="'animate'" class="list cf" ng-repeat ="myItem in items | filter:query | filter:status.online">
+
+		 <a href="#/details/{{items.indexOf(myItem)}}">
+
+		<img src="images/SSD-48.png"/>
+		
+		<div class="iteminfo">	
+		<div class="flex-container">		
+		<h2 class="flex-item"  >Controller Name: {{ myItem.controller_name }} &nbsp;&nbsp;</h2>
+		<div  class="flex-item" ng-switch="myItem.online">
+    			<p ng-switch-when="true">
+      				<img class=""src="images/hc.png"/>
+    			</p>
+    			<p ng-switch-when="false">
+      					<img src="images/nc.png"/>
+    			</p>
+    		
+		</div>
+		</div>
+		<h4>Name: {{ myItem.name }}</h4>
+
+
+
+		</div>
+		</a>
+		</li>
+	</ul>
+</section>
